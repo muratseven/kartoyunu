@@ -21,7 +21,7 @@ export const resetPlayerInfo = () => {
     window.location.reload(false)
   );
 };
-
+ 
 export const getValue = () => {
   return (
     <div className="containerDiv">
