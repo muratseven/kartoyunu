@@ -1,5 +1,6 @@
 # Memory Card Game
--Meteor
+
+Meteor:
 Meteor allows you to develop in one language, JavaScript, in all environments: application server, web browser, and mobile device.
 Meteor uses data on the wire, meaning the server sends data, not HTML, and the client renders it.
 Meteor embraces the ecosystem, bringing the best parts of the extremely active JavaScript community to you in a careful and considered way.
