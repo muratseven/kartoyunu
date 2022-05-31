@@ -22,6 +22,26 @@ let colors = [
   "pink",
   "brown",
   "black",
+  "#EEF3D2",
+  "#6A67CE",
+  "#BDE6F1",
+  "#F806CC",
+  "#00FFAB",
+  "#EC9B3B",
+  "#827397",
+  "#C2DED1",
+  "#FFDAAF",
+  "#C69B7B",
+  "#614124",
+  "#066163",
+  "#B9F8D3",
+  "#F1D00A",
+  "#F2C9E1",
+  "#E0DDAA",
+  "#203239",
+  "#FFBDE6",
+  "#B33030"
+
 ]; //random colors for squares
 
 let level = 2; //level of game
@@ -93,13 +113,14 @@ const createBox = (value) => {
     : (secondPlayer.classList.remove("changePlayer"),
       firstPlayer.classList.add("changePlayer"));
   for (let i = 0; i < squares.length; i++) {
-    //for loop for selecting random colors
-    let color = colors[Math.floor(Math.random() * colors.length)]; //random color
+    selectedColors = [];
+    let color = colors[Math.floor(Math.random() * colors.length)]; 
+    selectedColors.push(color)
     for (let f = 1; f <= 2; f++) {
-      //for loop for selecting random colors
       if (b < squares.length) {
-        //if b is less than squares.length
-        squares[innerCount[b]].setAttribute("color", color); //set attribute to square
+        if ( colors[i] !== selectedColors ) { 
+          squares[innerCount[b]].setAttribute("color", colors[i]);
+      }
         b++;
       }
     }
@@ -136,6 +157,7 @@ const createBox = (value) => {
           if (count === squares.length / 2) {
             //if count is equal to squares.length/2
             plevel.textContent = level++;
+            colors = colors;
             main.innerHTML = "";
             createBox(queue);
           }
