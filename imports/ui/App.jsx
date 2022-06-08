@@ -40,7 +40,12 @@ let colors = [
   "#E0DDAA",
   "#203239",
   "#FFBDE6",
-  "#B33030"
+  "#B33030",
+  '#34B3F1',
+  '#9EB23B',
+  '#FF4949',
+  '#FFEF82',
+  '#FF5C8D'
 
 ]; //random colors for squares
 
@@ -60,6 +65,7 @@ const createBox = (value) => {
     dim = dim + 5; //dim is increased by 5
     width = width + width; //width is increased by width
     main.style.width = width + "px"; //width of main div
+    console.log('level 3 ?')
   }
   if (level == 4) {
     dim = dim - 5; //dim is increased by 5
@@ -81,9 +87,19 @@ const createBox = (value) => {
   }
   if (level == 7) {
     dim = dim - 5; //dim is increased by 5
-    width = width; //width is increased by width/5
+    width = width ; //width is increased by width/5
     main.style.width = width + "px"; //width of main div
     console.warn("level 7", width);
+  }
+  if (level == 8) {
+    dim = dim; //dim is increased by 5
+    width = width; //width is increased by width/5
+    main.style.width = width + "px"; //width of main div
+    console.warn("level 8", width);
+  }
+  if (level == 9) {
+    window.alert("🎉Congratulations, you have completed the game. Click to start over.")
+    window.location.reload(false);
   }
   for (let i = 0; i < level * 8; i++) {
     const square = document.createElement("div");
