@@ -62,6 +62,7 @@ const createBox = (value) => {
   main.style.width = width + width / 3 + "px"; //width of main div
 
   if (level == 3) {
+    
     dim = dim + 5; //dim is increased by 5
     width = width + width; //width is increased by width
     main.style.width = width + "px"; //width of main div
